@@ -1,0 +1,203 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  background-color: #0b0f14;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ================= HEADER (READER) ================= */
+.header {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  padding: 30px 60px;
+  border-radius: 20px ;
+  box-shadow: #0f2724
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Frase no lado ESQUERDO */
+.frase-header {
+  max-width: 500px;
+  text-align: left;
+}
+
+.frase-header h2 {
+  font-size: 2rem;
+  color: #00ff9c;
+  margin-bottom: 10px;
+}
+
+.frase-header p {
+  font-size: 1.1rem;
+  color: #cfd8dc;
+  line-height: 1.6;
+}
+
+/* Logo no lado DIREITO */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+}
+
+.titulo h1 {
+  font-size: 2.4rem;
+  color: #00ff9c;
+}
+
+.titulo p {
+  font-size: 1.1rem;
+  color: #cfd8dc;
+}
+
+/* ================= SECTION ================= */
+section {
+  padding: 60px 10%;
+}
+
+/* ================= MEDIA / CARROSSEL ================= */
+.media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 
+/* Imagens SEM CORTE */
+.carrosel {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* NÃO corta */
+  display: none;
+}
+
+/* Botões fora do quadro */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #00ff9c;
+  color: #0b0f14;
+  border: none;
+  font-size: 28px;
+  padding: 14px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(0, 255, 156, 0.7);
+}
+
+.prev {
+  left: -80px;
+}
+
+.next {
+  right: -80px;
+}
+
+.prev:hover,
+.next:hover {
+  transform: translateY(-50%) scale(1.15);
+}
+
+/* ================= FRASE ABAIXO DO CARROSSEL ================= */
+.frase {
+  max-width: 800px;
+  text-align: center;
+}
+
+.frase h2 {
+  color: #00ff9c;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.frase p {
+  font-size: 1.1rem;
+  color: #cfd8dc;
+  line-height: 1.7;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 900px) {
+  .slides {
+    aspect-ratio: 4 / 3;
+  }
+
+  .prev {
+    left: -45px;
+  }
+
+  .next {
+    right: -45px;
+  }
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f2027;
+  color: #cfd8dc;
+  font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .logo-area {
+    justify-content: center;
+  }
+
+  .media {
+    gap: 20px;
+  }
+
+  .carousel {
+    max-width: 100%;
+  }
+
+  .carrosel {
+    height: 280px;
+  }
+
+  .prev {
+    left: -40px;
+  }
+
+  .next {
+    right: -40px;
+  }
+}
